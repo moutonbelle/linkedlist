@@ -1,6 +1,7 @@
 export default class List {
   constructor() {
     this.head = null;
+    this.length = 0;
   }
 
   get tail() {
@@ -18,6 +19,8 @@ export default class List {
 
     if (this.head === null) this.head = newNode;
     else this.tail.next = newNode;
+
+    this.length++;
   }
 
   prepend(value = "") {
@@ -28,6 +31,8 @@ export default class List {
       newNode.next = this.head;
       this.head = newNode;
     }
+
+    this.length++;
   }
 }
 

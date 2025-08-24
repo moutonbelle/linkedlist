@@ -18,3 +18,4 @@ while (curr.next !== null) {
   curr = curr.next;
 }
 console.log(curr.value);
+console.log("LIST LENGTH: ", list.length);
