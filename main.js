@@ -24,3 +24,10 @@ console.log(list.toString(), list.length);
 console.log(list.insertAt("Viper", 5), list.length);
 list.insertAt("Viper", 4);
 console.log(list.toString(), list.length);
+
+list.removeAt(0);
+console.log(list.toString(), list.length);
+list.removeAt(4);
+console.log(list.toString(), list.length);
+list.removeAt(1);
+console.log(list.toString(), list.length);

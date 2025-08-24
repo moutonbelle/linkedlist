@@ -140,7 +140,26 @@ export default class List {
     }
   }
 
-  removeAt(index) {}
+  removeAt(index) {
+    // If index beyond list, error
+    if (index >= this.length) return null;
+
+    // If removing head . . .
+    if (index === 0) {
+      this.head = this.head.next;
+      this.length--;
+    } else {
+      // Else traverse the list to predecessor
+      let i = 0,
+        curr = this.head;
+      while (i < index - 1) {
+        curr = curr.next;
+        i++;
+      }
+      curr.next = curr.next.next;
+      this.length--;
+    }
+  }
 }
 
 class Node {
