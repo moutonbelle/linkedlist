@@ -115,6 +115,29 @@ export default class List {
 
     return result;
   }
+
+  insertAt(value, index) {
+    // If index beyond list, error
+    if (index >= this.length) return null;
+
+    // Special cases of prepend or append
+    if (index === 0) this.prepend(value);
+    else if (index === this.length - 1) this.append(value);
+    else {
+      // If index is in middle of the list, traverse to node before index
+      let curr = this.head;
+      let i = 0;
+      while (i < index - 1) {
+        curr = curr.next;
+        i++;
+      }
+
+      // Insert new node
+      let newNode = new Node(value);
+      newNode.next = curr.next;
+      curr.next = newNode;
+    }
+  }
 }
 
 class Node {

@@ -19,3 +19,8 @@ console.log(
 );
 
 console.log(list.toString());
+list.insertAt("Eagle", 0);
+console.log(list.toString());
+console.log(list.insertAt("Viper", 5));
+list.insertAt("Viper", 4);
+console.log(list.toString());
