@@ -136,8 +136,11 @@ export default class List {
       let newNode = new Node(value);
       newNode.next = curr.next;
       curr.next = newNode;
+      this.length++;
     }
   }
+
+  removeAt(index) {}
 }
 
 class Node {

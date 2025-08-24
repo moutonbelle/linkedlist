@@ -18,9 +18,9 @@ console.log(
   list.find("Giraffe")
 );
 
-console.log(list.toString());
+console.log(list.toString(), list.length);
 list.insertAt("Eagle", 0);
-console.log(list.toString());
-console.log(list.insertAt("Viper", 5));
+console.log(list.toString(), list.length);
+console.log(list.insertAt("Viper", 5), list.length);
 list.insertAt("Viper", 4);
-console.log(list.toString());
+console.log(list.toString(), list.length);
