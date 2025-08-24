@@ -83,6 +83,23 @@ export default class List {
     // Reached end of list; value not contained
     return false;
   }
+
+  find(value) {
+    // If list is empty, it does not contain value => return null
+    if (this.head === null) return null;
+
+    // Else, traverse list, testing each node for value and tracking index
+    let curr = this.head;
+    let i = 0;
+    while (curr.next !== null) {
+      if (curr.value == value) return i;
+      curr = curr.next;
+      i++;
+    }
+
+    // Reached end of list; value not contained
+    return null;
+  }
 }
 
 class Node {
