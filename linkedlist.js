@@ -68,6 +68,21 @@ export default class List {
     this.length--;
     return target;
   }
+
+  contains(value) {
+    // If list is empty, it does not contain value => return false
+    if (this.head === null) return false;
+
+    // Else, traverse list, testing each node for value
+    let curr = this.head;
+    while (curr.next !== null) {
+      if (curr.value == value) return true;
+      curr = curr.next;
+    }
+
+    // Reached end of list; value not contained
+    return false;
+  }
 }
 
 class Node {

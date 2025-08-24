@@ -31,3 +31,5 @@ while (curr.next !== null) {
   curr = curr.next;
 }
 console.log(curr.value);
+
+console.log("CONTAINS: ", list.contains("Giraffe"), list.contains("Eagle"));
