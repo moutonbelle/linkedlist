@@ -6,6 +6,7 @@ let list = new List();
 list.append("Tiger");
 list.append("Elephant");
 list.append("Lion");
+list.prepend("Giraffe");
 
 // Test list
 console.log(list);

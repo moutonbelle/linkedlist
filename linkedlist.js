@@ -14,10 +14,20 @@ export default class List {
   }
 
   append(value = "") {
-    let node = new Node(value);
+    let newNode = new Node(value);
+
+    if (this.head === null) this.head = newNode;
+    else this.tail.next = newNode;
+  }
+
+  prepend(value = "") {
+    let newNode = new Node(value);
 
     if (this.head === null) this.head = node;
-    else this.tail.next = node;
+    else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
   }
 }
 
