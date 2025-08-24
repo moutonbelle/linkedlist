@@ -34,6 +34,19 @@ export default class List {
 
     this.length++;
   }
+
+  at(i) {
+    i = Number(i);
+    // If index is beyond list, return null
+    if (i >= this.length) return null;
+
+    if (i === 0) return this.head;
+
+    // Otherwise traverse the list to index i
+    let target = this.head;
+    for (let j = 0; j < i; j++) target = target.next;
+    return target;
+  }
 }
 
 class Node {
