@@ -47,6 +47,27 @@ export default class List {
     for (let j = 0; j < i; j++) target = target.next;
     return target;
   }
+
+  pop() {
+    // If list is empty, return null
+    if (this.head === null) return null;
+
+    // If list has only one element, pop it
+    if (this.length === 1) {
+      let target = this.head;
+      this.head = null;
+      this.length--;
+      return target;
+    }
+
+    // Else traverse to second to last node and pop last node
+    let newTail = this.head;
+    while (newTail.next.next !== null) newTail = newTail.next;
+    let target = newTail.next;
+    newTail.next = null;
+    this.length--;
+    return target;
+  }
 }
 
 class Node {
