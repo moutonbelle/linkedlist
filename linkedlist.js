@@ -100,6 +100,21 @@ export default class List {
     // Reached end of list; value not contained
     return null;
   }
+
+  toString() {
+    if (this.head === null) return "null";
+
+    let result = "";
+    let curr = this.head;
+    result += `( ${curr.value} ) -> `;
+    while (curr.next !== null) {
+      curr = curr.next;
+      result += `( ${curr.value} ) -> `;
+    }
+    result += "null";
+
+    return result;
+  }
 }
 
 class Node {
