@@ -75,7 +75,7 @@ export default class List {
 
     // Else, traverse list, testing each node for value
     let curr = this.head;
-    while (curr.next !== null) {
+    while (curr !== null) {
       if (curr.value == value) return true;
       curr = curr.next;
     }
@@ -91,7 +91,7 @@ export default class List {
     // Else, traverse list, testing each node for value and tracking index
     let curr = this.head;
     let i = 0;
-    while (curr.next !== null) {
+    while (curr !== null) {
       if (curr.value == value) return i;
       curr = curr.next;
       i++;
